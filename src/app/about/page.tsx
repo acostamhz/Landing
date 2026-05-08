@@ -1,4 +1,5 @@
 // Desarrollado por Jhoan Camilo // 
+
 export default function AboutPage() {
   return (
     <main>
