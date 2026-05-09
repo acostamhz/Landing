@@ -2,6 +2,7 @@
 
 "use client";
 
+import Image from "next/image";
 import FadeIn from "@/components/animations/FadeIn";
 
 export default function Footer() {
@@ -10,14 +11,24 @@ export default function Footer() {
       <FadeIn>
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Marca */}
-          <div>
-            <h3 className="text-lg font-semibold tracking-[0.2em] uppercase">
-              Grupo Caishen
-            </h3>
+          <div className="flex items-center gap-4">
+            <Image
+              src="/logos/caishen/Logo.png"
+              alt="Grupo Caishen"
+              width={36}
+              height={36}
+              className="object-contain"
+            />
 
-            <p className="text-zinc-500 text-sm mt-2">
-              © 2026 — Todos los derechos reservados.
-            </p>
+            <div>
+              <h3 className="text-lg font-semibold tracking-[0.2em] uppercase">
+                Grupo Caishen
+              </h3>
+
+              <p className="text-zinc-500 text-sm mt-2">
+                © 2026 — Todos los derechos reservados.
+              </p>
+            </div>
           </div>
 
           {/* Enlaces */}
