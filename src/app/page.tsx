@@ -6,6 +6,7 @@ import AboutSection from "@/components/sections/AboutSection";
 import VisionSection from "@/components/sections/VisionSection";
 import PhilosophySection from "@/components/sections/PhilosophySection";
 import CompaniesSection from "@/components/sections/CompaniesSection";
+import HobisuSection from "@/components/sections/HobisuSection";
 
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/footer/Footer";
@@ -22,6 +23,8 @@ export default function HomePage() {
       <PhilosophySection />
 
       <CompaniesSection />
+
+      <HobisuSection />
 
       <VisionSection />
 
