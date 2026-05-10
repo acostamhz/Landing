@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "philosophy": "Filosofía",
+    "companies": "Empresas",
+    "vision": "Visión",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "badge": "Holding Empresarial Colombiana",
+    "title": "Construimos",
+    "subtitle": "empresas, patrimonio y legado."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "philosophy": "Philosophy",
+    "companies": "Companies",
+    "vision": "Vision",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Colombian Holding Company",
+    "title": "We Build",
+    "subtitle": "companies, wealth and legacy."
+  }
+}

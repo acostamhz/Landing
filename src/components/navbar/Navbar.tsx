@@ -3,17 +3,20 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import { useTranslations, useLocale } from "next-intl";
 
-const links = [
-  { label: "Filosofía", href: "#philosophy" },
-  { label: "Empresas", href: "#companies" },
-  { label: "Visión", href: "#vision" },
-  { label: "Contacto", href: "#contact" },
+const sections = [
+  { key: "philosophy", href: "#philosophy" },
+  { key: "companies", href: "#companies" },
+  { key: "vision", href: "#vision" },
+  { key: "contact", href: "#contact" },
 ];
 
 export default function Navbar() {
+  const t = useTranslations("navigation");
+  const locale = useLocale();
+
   return (
     <motion.header
       initial={{ y: -80, opacity: 0 }}
@@ -22,34 +25,21 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-white/5"
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        {/* Marca */}
         <Link
-          href="/"
-          className="flex items-center gap-4"
+          href={`/${locale}`}
+          className="text-xl tracking-[0.3em] uppercase font-semibold"
         >
-          <Image
-            src="/logos/caishen/Logo.png"
-            alt="Grupo Caishen"
-            width={42}
-            height={42}
-            priority
-            className="object-contain"
-          />
-
-          <span className="text-xl tracking-[0.3em] uppercase font-semibold">
-            Grupo Caishen
-          </span>
+          Grupo Caishen
         </Link>
 
-        {/* Navegación */}
         <nav className="hidden md:flex items-center gap-10">
-          {links.map((link) => (
+          {sections.map((section) => (
             <a
-              key={link.label}
-              href={link.href}
-              className="text-sm text-zinc-400 hover:text-white transition-colors duration-300"
+              key={section.key}
+              href={section.href}
+              className="text-sm text-zinc-400 hover:text-white transition-colors"
             >
-              {link.label}
+              {t(section.key)}
             </a>
           ))}
         </nav>
