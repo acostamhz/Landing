@@ -1,6 +1,7 @@
 // Desarrollado por Jhoan Camilo
 
 import type { Metadata } from "next";
+import StructuredData from "@/components/StructuredData";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -15,25 +16,75 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  // URL base del sitio para generar URLs absolutas en Open Graph
+  // URL base del sitio para generar URLs absolutas
   metadataBase: new URL("https://caishen.com.co"),
 
-  // Información principal del sitio
-  title: "Grupo Caishen",
+  // Títulos dinámicos para SEO
+  title: {
+    default: "Grupo Caishen",
+    template: "%s | Grupo Caishen",
+  },
+
+  // Descripción principal
   description:
     "Holding empresarial colombiana enfocada en construir compañías, patrimonio y legado con visión de largo plazo.",
+
+  // Palabras clave SEO
+  keywords: [
+    "Grupo Caishen",
+    "holding empresarial",
+    "holding colombiana",
+    "empresa de inversiones",
+    "patrimonio",
+    "legado",
+    "Hobisu",
+    "inversiones",
+    "tecnología",
+    "Colombia",
+  ],
+
+  // Autoría
+  authors: [
+    {
+      name: "Jhoan Camilo",
+    },
+  ],
+
+  creator: "Jhoan Camilo",
+  publisher: "Grupo Caishen",
+
+  // URL canónica
+  alternates: {
+    canonical: "/",
+  },
+
+  // Robots para SEO
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 
   // Nombre de la aplicación
   applicationName: "Grupo Caishen",
 
-  // Configuración del favicon
+  // Categoría del sitio
+  category: "Business",
+
+  // Favicon e íconos
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
   },
 
-  // Open Graph (WhatsApp, LinkedIn, Facebook, etc.)
+  // Open Graph (WhatsApp, LinkedIn, Facebook)
   openGraph: {
     title: "Grupo Caishen",
     description:
@@ -60,15 +111,6 @@ export const metadata: Metadata = {
       "Holding empresarial colombiana enfocada en construir compañías, patrimonio y legado con visión de largo plazo.",
     images: ["/images/og/Metadata.png"],
   },
-
-  // Robots para SEO
-  robots: {
-    index: true,
-    follow: true,
-  },
-
-  // Categoría del sitio
-  category: "Business",
 };
 
 export default function RootLayout({
@@ -82,6 +124,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-black text-white">
+        <StructuredData />
         {children}
       </body>
     </html>
