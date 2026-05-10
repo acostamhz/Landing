@@ -2,7 +2,6 @@
 
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
 import { hasLocale } from "next-intl";
 
 import { locales } from "@/i18n/config";
@@ -14,16 +13,19 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
+  // Obtener el idioma de la URL (/es o /en)
   const { locale } = await params;
 
+  // Validar que el idioma sea soportado
   if (!hasLocale(locales, locale)) {
     notFound();
   }
 
-  const messages = await getMessages();
+  // Cargar directamente el archivo de traducciones
+  const messages = (await import(`@/messages/${locale}.json`)).default;
 
   return (
-    <NextIntlClientProvider messages={messages}>
+    <NextIntlClientProvider locale={locale} messages={messages}>
       {children}
     </NextIntlClientProvider>
   );

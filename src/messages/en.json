@@ -7,7 +7,10 @@
   },
   "hero": {
     "badge": "Colombian Holding Company",
-    "title": "We Build",
-    "subtitle": "companies, wealth and legacy."
+    "titleLine1": "We Build",
+    "titleLine2": "companies, wealth and legacy.",
+    "description": "Grupo Caishen is a holding company focused on developing modern businesses with a long-term vision, strategic innovation and sustainable value creation.",
+    "primaryButton": "Explore Ecosystem",
+    "secondaryButton": "Our Philosophy"
   }
 }

@@ -6,6 +6,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useTranslations, useLocale } from "next-intl";
 
+import LanguageSwitcher from "./LanguageSwitcher";
+
 const sections = [
   { key: "philosophy", href: "#philosophy" },
   { key: "companies", href: "#companies" },
@@ -25,6 +27,7 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-white/5"
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        {/* Logo / Nombre */}
         <Link
           href={`/${locale}`}
           className="text-xl tracking-[0.3em] uppercase font-semibold"
@@ -32,17 +35,22 @@ export default function Navbar() {
           Grupo Caishen
         </Link>
 
-        <nav className="hidden md:flex items-center gap-10">
-          {sections.map((section) => (
-            <a
-              key={section.key}
-              href={section.href}
-              className="text-sm text-zinc-400 hover:text-white transition-colors"
-            >
-              {t(section.key)}
-            </a>
-          ))}
-        </nav>
+        {/* Navegación + Selector de idioma */}
+        <div className="hidden md:flex items-center gap-10">
+          <nav className="flex items-center gap-10">
+            {sections.map((section) => (
+              <a
+                key={section.key}
+                href={section.href}
+                className="text-sm text-zinc-400 hover:text-white transition-colors"
+              >
+                {t(section.key)}
+              </a>
+            ))}
+          </nav>
+
+          <LanguageSwitcher />
+        </div>
       </div>
     </motion.header>
   );

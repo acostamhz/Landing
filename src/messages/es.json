@@ -7,7 +7,10 @@
   },
   "hero": {
     "badge": "Holding Empresarial Colombiana",
-    "title": "Construimos",
-    "subtitle": "empresas, patrimonio y legado."
+    "titleLine1": "Construimos",
+    "titleLine2": "empresas, patrimonio y legado.",
+    "description": "Grupo Caishen es una holding enfocada en desarrollar compañías modernas con visión de largo plazo, innovación estratégica y creación de valor sostenible.",
+    "primaryButton": "Explorar Ecosistema",
+    "secondaryButton": "Nuestra Filosofía"
   }
 }

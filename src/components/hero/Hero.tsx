@@ -2,11 +2,15 @@
 
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import SlideUp from "@/components/animations/SlideUp";
 import FadeIn from "@/components/animations/FadeIn";
 import StaggerContainer from "@/components/animations/StaggerContainer";
 
 export default function Hero() {
+  const t = useTranslations("hero");
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Glow radial superior */}
@@ -21,16 +25,16 @@ export default function Hero() {
           <SlideUp>
             <div className="mb-6 inline-flex items-center gap-3 border border-white/10 rounded-full px-5 py-2 text-sm text-zinc-400">
               <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
-              Holding Empresarial Colombiana
+              {t("badge")}
             </div>
           </SlideUp>
 
           {/* Título principal */}
           <SlideUp>
             <h1 className="text-6xl md:text-8xl font-black tracking-tight leading-[0.95] mb-10">
-              Construimos
+              {t("titleLine1")}
               <span className="block text-zinc-500">
-                empresas, patrimonio y legado.
+                {t("titleLine2")}
               </span>
             </h1>
           </SlideUp>
@@ -38,9 +42,7 @@ export default function Hero() {
           {/* Descripción */}
           <FadeIn>
             <p className="max-w-2xl text-xl text-zinc-400 leading-relaxed mb-12">
-              Grupo Caishen es una holding enfocada en desarrollar compañías
-              modernas con visión de largo plazo, innovación estratégica y
-              creación de valor sostenible.
+              {t("description")}
             </p>
           </FadeIn>
 
@@ -48,11 +50,11 @@ export default function Hero() {
           <SlideUp>
             <div className="flex flex-wrap gap-5">
               <button className="px-8 py-4 bg-white text-black rounded-2xl font-semibold hover:scale-105 transition-transform duration-300">
-                Explorar Ecosistema
+                {t("primaryButton")}
               </button>
 
               <button className="px-8 py-4 border border-white/10 rounded-2xl hover:bg-white/5 transition-colors duration-300">
-                Nuestra Filosofía
+                {t("secondaryButton")}
               </button>
             </div>
           </SlideUp>
