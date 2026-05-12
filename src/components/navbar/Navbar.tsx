@@ -2,6 +2,7 @@
 
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useTranslations, useLocale } from "next-intl";
@@ -27,12 +28,23 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-white/5"
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        {/* Logo / Nombre */}
+        {/* Logo + Nombre */}
         <Link
           href={`/${locale}`}
-          className="text-xl tracking-[0.3em] uppercase font-semibold"
+          className="flex items-center gap-4"
         >
-          Grupo Caishen
+          <Image
+            src="/logos/caishen/Logo.png"
+            alt="Grupo Caishen"
+            width={42}
+            height={42}
+            className="object-contain"
+            priority
+          />
+
+          <span className="text-xl tracking-[0.3em] uppercase font-semibold">
+            Grupo Caishen
+          </span>
         </Link>
 
         {/* Navegación + Selector de idioma */}
