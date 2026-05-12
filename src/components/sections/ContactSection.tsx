@@ -4,8 +4,11 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function ContactSection() {
+  const t = useTranslations("contact");
+
   const [status, setStatus] = useState<
     "idle" | "sending" | "success" | "error"
   >("idle");
@@ -54,12 +57,11 @@ export default function ContactSection() {
         {/* Encabezado */}
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-black leading-tight mb-8">
-            El futuro apenas comienza.
+            {t("title")}
           </h2>
 
           <p className="text-zinc-400 text-xl leading-relaxed max-w-3xl mx-auto">
-            Grupo Caishen continúa construyendo compañías, proyectos y activos
-            con una visión enfocada en innovación, patrimonio y largo plazo.
+            {t("description")}
           </p>
         </div>
 
@@ -71,56 +73,56 @@ export default function ContactSection() {
           {/* Nombre */}
           <div>
             <label className="block text-sm text-zinc-400 mb-2">
-              Nombre
+              {t("fields.name.label")}
             </label>
             <input
               type="text"
               name="name"
               required
+              placeholder={t("fields.name.placeholder")}
               className="w-full rounded-2xl bg-zinc-950 border border-white/10 px-6 py-4 text-white placeholder:text-zinc-500 focus:outline-none focus:border-white/30 transition-colors"
-              placeholder="Tu nombre"
             />
           </div>
 
           {/* Correo */}
           <div>
             <label className="block text-sm text-zinc-400 mb-2">
-              Correo electrónico
+              {t("fields.email.label")}
             </label>
             <input
               type="email"
               name="email"
               required
+              placeholder={t("fields.email.placeholder")}
               className="w-full rounded-2xl bg-zinc-950 border border-white/10 px-6 py-4 text-white placeholder:text-zinc-500 focus:outline-none focus:border-white/30 transition-colors"
-              placeholder="tu@correo.com"
             />
           </div>
 
           {/* Asunto */}
           <div>
             <label className="block text-sm text-zinc-400 mb-2">
-              Asunto
+              {t("fields.subject.label")}
             </label>
             <input
               type="text"
               name="subject"
               required
+              placeholder={t("fields.subject.placeholder")}
               className="w-full rounded-2xl bg-zinc-950 border border-white/10 px-6 py-4 text-white placeholder:text-zinc-500 focus:outline-none focus:border-white/30 transition-colors"
-              placeholder="Motivo del mensaje"
             />
           </div>
 
           {/* Mensaje */}
           <div>
             <label className="block text-sm text-zinc-400 mb-2">
-              Mensaje
+              {t("fields.message.label")}
             </label>
             <textarea
               name="message"
               required
               rows={6}
+              placeholder={t("fields.message.placeholder")}
               className="w-full rounded-2xl bg-zinc-950 border border-white/10 px-6 py-4 text-white placeholder:text-zinc-500 focus:outline-none focus:border-white/30 transition-colors resize-none"
-              placeholder="Escribe tu mensaje..."
             />
           </div>
 
@@ -131,20 +133,20 @@ export default function ContactSection() {
             className="w-full md:w-auto px-10 py-5 rounded-2xl bg-white text-black font-semibold hover:scale-105 transition-transform disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {status === "sending"
-              ? "Enviando..."
-              : "Contactar Grupo Caishen"}
+              ? t("sending")
+              : t("submit")}
           </button>
 
           {/* Mensajes de estado */}
           {status === "success" && (
             <p className="text-green-400 mt-4">
-              Mensaje enviado correctamente.
+              {t("success")}
             </p>
           )}
 
           {status === "error" && (
             <p className="text-red-400 mt-4">
-              Ocurrió un error al enviar el mensaje.
+              {t("error")}
             </p>
           )}
         </form>

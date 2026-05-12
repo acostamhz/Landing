@@ -2,11 +2,15 @@
 
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import SlideUp from "@/components/animations/SlideUp";
 import FadeIn from "@/components/animations/FadeIn";
 import StaggerContainer from "@/components/animations/StaggerContainer";
 
 export default function PhilosophySection() {
+  const t = useTranslations("philosophy");
+
   return (
     <section
       id="philosophy"
@@ -20,16 +24,16 @@ export default function PhilosophySection() {
           {/* Etiqueta */}
           <SlideUp>
             <p className="uppercase tracking-[0.3em] text-zinc-500 text-sm mb-8">
-              Filosofía
+              {t("badge")}
             </p>
           </SlideUp>
 
           {/* Título */}
           <SlideUp>
             <h2 className="text-6xl md:text-7xl font-black leading-tight mb-10">
-              Crear valor real
+              {t("titleLine1")}
               <span className="block text-zinc-500">
-                para generaciones futuras.
+                {t("titleLine2")}
               </span>
             </h2>
           </SlideUp>
@@ -37,8 +41,7 @@ export default function PhilosophySection() {
           {/* Descripción */}
           <FadeIn>
             <p className="text-zinc-400 text-xl leading-relaxed max-w-3xl mx-auto">
-              No perseguimos tendencias pasajeras. Construimos compañías y
-              activos capaces de mantenerse sólidos con el paso del tiempo.
+              {t("description")}
             </p>
           </FadeIn>
         </StaggerContainer>

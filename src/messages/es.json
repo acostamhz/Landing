@@ -12,5 +12,100 @@
     "description": "Grupo Caishen es una holding enfocada en desarrollar compañías modernas con visión de largo plazo, innovación estratégica y creación de valor sostenible.",
     "primaryButton": "Explorar Ecosistema",
     "secondaryButton": "Nuestra Filosofía"
+  },
+  "about": {
+  "badge": "Sobre Nosotros",
+  "titleLine1": "Pensamos en décadas,",
+  "titleLine2": "no en resultados inmediatos.",
+  "description": "Grupo Caishen nace con una visión enfocada en construir activos, compañías y proyectos con impacto real, integrando tecnología, capital y estrategia empresarial bajo una filosofía de largo plazo.",
+  "stats": {
+      "foundation": "Fundación",
+      "vision": "Visión",
+      "origin": "Origen",
+      "activeBrand": "Marca activa"
+    }
+  },
+  "philosophy": {
+  "badge": "Filosofía",
+  "titleLine1": "Crear valor real",
+  "titleLine2": "para generaciones futuras.",
+  "description": "No perseguimos tendencias pasajeras. Construimos compañías y activos capaces de mantenerse sólidos con el paso del tiempo."
+  },
+  "companies": {
+  "badge": "Ecosistema",
+  "titleLine1": "Empresas &",
+  "titleLine2": "proyectos",
+  "explore": "Explorar",
+  "items": {
+      "hobisu": {
+        "category": "Tecnología",
+        "description": "Marca enfocada en dispositivos Apple y tecnología premium."
+      },
+      "futureVentures": {
+        "category": "Próximamente",
+        "description": "Nuevos negocios y adquisiciones estratégicas en desarrollo."
+      }
+    }
+  },
+  "contact": {
+  "title": "El futuro apenas comienza.",
+  "description": "Grupo Caishen continúa construyendo compañías, proyectos y activos con una visión enfocada en innovación, patrimonio y largo plazo.",
+  "submit": "Contactar Grupo Caishen",
+  "sending": "Enviando...",
+  "success": "Mensaje enviado correctamente.",
+  "error": "Ocurrió un error al enviar el mensaje.",
+    "fields": {
+      "name": {
+        "label": "Nombre",
+        "placeholder": "Tu nombre"
+      },
+      "email": {
+        "label": "Correo electrónico",
+        "placeholder": "tu@correo.com"
+      },
+      "subject": {
+        "label": "Asunto",
+        "placeholder": "Motivo del mensaje"
+      },
+      "message": {
+        "label": "Mensaje",
+        "placeholder": "Escribe tu mensaje..."
+      }
+    }
+  },
+  "hobisu": {
+  "badge": "Empresa Destacada",
+  "titleLine2": "tecnología premium.",
+  "description": "Hobisu es una marca de Grupo Caishen enfocada en la comercialización de dispositivos Apple y tecnología premium, diseñada para ofrecer productos auténticos con una experiencia de compra moderna, confiable y sofisticada.",
+  "cta": "Visitar Hobisu",
+    "stats": {
+      "foundation": {
+        "label": "Fundación",
+        "value": "2026"
+      },
+      "status": {
+        "label": "Estado",
+        "value": "Activa"
+      },
+      "category": {
+        "label": "Categoría",
+        "value": "Tecnología"
+      },
+      "website": {
+        "label": "Sitio Web"
+      }
+    }
+  },
+  "vision": {
+  "badge": "Visión",
+  "titleLine1": "Convertirnos en una holding",
+  "titleLine2": "reconocida por su visión y permanencia.",
+  "description": "Aspiramos a construir un ecosistema empresarial sólido, moderno y diversificado, capaz de generar valor sostenible durante décadas."
+  },
+  "footer": {
+  "copyright": "© 2026 — Todos los derechos reservados.",
+  "privacy": "Privacidad",
+  "terms": "Términos",
+  "contact": "Contacto"
   }
 }

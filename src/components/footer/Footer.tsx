@@ -2,10 +2,15 @@
 
 "use client";
 
+import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
+
 import FadeIn from "@/components/animations/FadeIn";
 
 export default function Footer() {
+  const t = useTranslations("footer");
+  const locale = useLocale();
+
   return (
     <footer className="border-t border-white/5 py-10">
       <FadeIn>
@@ -26,7 +31,7 @@ export default function Footer() {
               </h3>
 
               <p className="text-zinc-500 text-sm mt-2">
-                © 2026 — Todos los derechos reservados.
+                {t("copyright")}
               </p>
             </div>
           </div>
@@ -37,21 +42,21 @@ export default function Footer() {
               href="#"
               className="hover:text-white transition-colors duration-300"
             >
-              Privacidad
+              {t("privacy")}
             </a>
 
             <a
               href="#"
               className="hover:text-white transition-colors duration-300"
             >
-              Términos
+              {t("terms")}
             </a>
 
             <a
-              href="#contact"
+              href={`/${locale}#contact`}
               className="hover:text-white transition-colors duration-300"
             >
-              Contacto
+              {t("contact")}
             </a>
           </div>
         </div>

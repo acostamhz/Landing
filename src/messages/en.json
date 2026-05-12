@@ -7,10 +7,105 @@
   },
   "hero": {
     "badge": "Colombian Holding Company",
-    "titleLine1": "We Build",
+    "titleLine1": "We build",
     "titleLine2": "companies, wealth and legacy.",
     "description": "Grupo Caishen is a holding company focused on developing modern businesses with a long-term vision, strategic innovation and sustainable value creation.",
     "primaryButton": "Explore Ecosystem",
     "secondaryButton": "Our Philosophy"
+  },
+  "about": {
+  "badge": "About Us",
+  "titleLine1": "We think in decades,",
+  "titleLine2": "not in immediate results.",
+  "description": "Grupo Caishen was founded with a vision focused on building assets, companies and projects with real impact, integrating technology, capital and business strategy under a long-term philosophy.",
+  "stats": {
+      "foundation": "Founded",
+      "vision": "Vision",
+      "origin": "Origin",
+      "activeBrand": "Active Brand"
+    }
+  },
+  "philosophy": {
+  "badge": "Philosophy",
+  "titleLine1": "Creating real value",
+  "titleLine2": "for future generations.",
+  "description": "We do not pursue short-lived trends. We build companies and assets capable of remaining strong over time."
+  },
+  "companies": {
+  "badge": "Ecosystem",
+  "titleLine1": "Companies &",
+  "titleLine2": "projects",
+  "explore": "Explore",
+  "items": {
+      "hobisu": {
+        "category": "Technology",
+        "description": "Brand focused on Apple devices and premium technology."
+      },
+      "futureVentures": {
+        "category": "Coming Soon",
+        "description": "New businesses and strategic acquisitions under development."
+      }
+    }
+  },
+  "contact": {
+  "title": "The future is just beginning.",
+  "description": "Grupo Caishen continues building companies, projects and assets with a vision focused on innovation, wealth and long-term value creation.",
+  "submit": "Contact Grupo Caishen",
+  "sending": "Sending...",
+  "success": "Message sent successfully.",
+  "error": "An error occurred while sending the message.",
+    "fields": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name"
+      },
+      "email": {
+        "label": "Email address",
+        "placeholder": "your@email.com"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Reason for your message"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Write your message..."
+      }
+    }
+  },
+  "hobisu": {
+  "badge": "Featured Company",
+  "titleLine2": "premium technology.",
+  "description": "Hobisu is a Grupo Caishen brand focused on the commercialization of Apple devices and premium technology, designed to offer authentic products with a modern, reliable and sophisticated purchasing experience.",
+  "cta": "Visit Hobisu",
+    "stats": {
+      "foundation": {
+        "label": "Founded",
+        "value": "2026"
+      },
+      "status": {
+        "label": "Status",
+        "value": "Active"
+      },
+      "category": {
+        "label": "Category",
+        "value": "Technology"
+      },
+      "website": {
+        "label": "Website"
+      }
+    }
+  },
+  "vision": {
+  "badge": "Vision",
+  "titleLine1": "To become a holding company",
+  "titleLine2": "recognized for its vision and permanence.",
+  "description": "We aspire to build a strong, modern and diversified business ecosystem capable of generating sustainable value for decades."
+  },
+  "footer": {
+  "copyright": "© 2026 — All rights reserved.",
+  "privacy": "Privacy",
+  "terms": "Terms",
+  "contact": "Contact"
   }
 }

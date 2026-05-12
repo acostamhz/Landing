@@ -2,30 +2,34 @@
 
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import SlideUp from "@/components/animations/SlideUp";
 import FadeIn from "@/components/animations/FadeIn";
 import StaggerContainer from "@/components/animations/StaggerContainer";
 
-const stats = [
-  {
-    value: "2025",
-    label: "Fundación",
-  },
-  {
-    value: "∞",
-    label: "Visión",
-  },
-  {
-    value: "COL",
-    label: "Origen",
-  },
-  {
-    value: "01",
-    label: "Marca activa",
-  },
-];
-
 export default function AboutSection() {
+  const t = useTranslations("about");
+
+  const stats = [
+    {
+      value: "2025",
+      label: t("stats.foundation"),
+    },
+    {
+      value: "∞",
+      label: t("stats.vision"),
+    },
+    {
+      value: "COL",
+      label: t("stats.origin"),
+    },
+    {
+      value: "01",
+      label: t("stats.activeBrand"),
+    },
+  ];
+
   return (
     <section className="py-40 border-y border-white/5">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-24">
@@ -33,24 +37,22 @@ export default function AboutSection() {
         <div>
           <SlideUp>
             <p className="uppercase tracking-[0.3em] text-zinc-500 text-sm mb-6">
-              Sobre Nosotros
+              {t("badge")}
             </p>
           </SlideUp>
 
           <SlideUp>
             <h2 className="text-5xl font-bold leading-tight mb-8">
-              Pensamos en décadas,
+              {t("titleLine1")}
               <span className="block text-zinc-500">
-                no en resultados inmediatos.
+                {t("titleLine2")}
               </span>
             </h2>
           </SlideUp>
 
           <FadeIn>
             <p className="text-zinc-400 text-lg leading-relaxed">
-              Grupo Caishen nace con una visión enfocada en construir activos,
-              compañías y proyectos con impacto real, integrando tecnología,
-              capital y estrategia empresarial bajo una filosofía de largo plazo.
+              {t("description")}
             </p>
           </FadeIn>
         </div>

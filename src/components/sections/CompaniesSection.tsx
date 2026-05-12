@@ -2,26 +2,28 @@
 
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import SlideUp from "@/components/animations/SlideUp";
 import FadeIn from "@/components/animations/FadeIn";
 import StaggerContainer from "@/components/animations/StaggerContainer";
 
-const companies = [
-  {
-    name: "Hobisu",
-    category: "Tecnología",
-    description:
-      "Marca enfocada en dispositivos Apple y tecnología premium.",
-  },
-  {
-    name: "Future Ventures",
-    category: "Próximamente",
-    description:
-      "Nuevos negocios y adquisiciones estratégicas en desarrollo.",
-  },
-];
-
 export default function CompaniesSection() {
+  const t = useTranslations("companies");
+
+  const companies = [
+    {
+      name: "Hobisu",
+      category: t("items.hobisu.category"),
+      description: t("items.hobisu.description"),
+    },
+    {
+      name: "Future Ventures",
+      category: t("items.futureVentures.category"),
+      description: t("items.futureVentures.description"),
+    },
+  ];
+
   return (
     <section
       id="companies"
@@ -32,14 +34,14 @@ export default function CompaniesSection() {
         <div className="mb-20">
           <SlideUp>
             <p className="uppercase tracking-[0.3em] text-zinc-500 text-sm mb-6">
-              Ecosistema
+              {t("badge")}
             </p>
           </SlideUp>
 
           <SlideUp>
             <h2 className="text-6xl font-black">
-              Empresas &
-              <span className="text-zinc-500"> proyectos</span>
+              {t("titleLine1")}
+              <span className="text-zinc-500"> {t("titleLine2")}</span>
             </h2>
           </SlideUp>
         </div>
@@ -62,7 +64,7 @@ export default function CompaniesSection() {
                 </p>
 
                 <button className="text-white font-medium group-hover:translate-x-2 transition-transform duration-300">
-                  Explorar →
+                  {t("explore")} →
                 </button>
               </div>
             </FadeIn>

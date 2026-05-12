@@ -2,11 +2,15 @@
 
 "use client";
 
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { motion } from "framer-motion";
+
 import FadeIn from "@/components/animations/FadeIn";
 
 export default function HobisuSection() {
+  const t = useTranslations("hobisu");
+
   return (
     <section
       id="hobisu"
@@ -16,13 +20,13 @@ export default function HobisuSection() {
         <FadeIn>
           <div className="mb-16">
             <p className="uppercase tracking-[0.3em] text-zinc-500 text-sm mb-6">
-              Empresa Destacada
+              {t("badge")}
             </p>
 
             <h2 className="text-5xl md:text-7xl font-black leading-tight">
               Hobisu
               <span className="block text-zinc-500">
-                tecnología premium.
+                {t("titleLine2")}
               </span>
             </h2>
           </div>
@@ -52,31 +56,42 @@ export default function HobisuSection() {
           {/* Contenido */}
           <div>
             <p className="text-zinc-400 text-xl leading-relaxed mb-10">
-              Hobisu es una marca de Grupo Caishen enfocada en la
-              comercialización de dispositivos Apple y tecnología premium,
-              diseñada para ofrecer productos auténticos con una experiencia de
-              compra moderna, confiable y sofisticada.
+              {t("description")}
             </p>
 
             {/* Datos */}
             <div className="grid grid-cols-2 gap-4 mb-10">
               <div className="rounded-2xl border border-white/5 bg-zinc-950 p-6">
-                <p className="text-zinc-500 text-sm mb-2">Fundación</p>
-                <p className="text-2xl font-bold">2026</p>
+                <p className="text-zinc-500 text-sm mb-2">
+                  {t("stats.foundation.label")}
+                </p>
+                <p className="text-2xl font-bold">
+                  {t("stats.foundation.value")}
+                </p>
               </div>
 
               <div className="rounded-2xl border border-white/5 bg-zinc-950 p-6">
-                <p className="text-zinc-500 text-sm mb-2">Estado</p>
-                <p className="text-2xl font-bold">Activa</p>
+                <p className="text-zinc-500 text-sm mb-2">
+                  {t("stats.status.label")}
+                </p>
+                <p className="text-2xl font-bold">
+                  {t("stats.status.value")}
+                </p>
               </div>
 
               <div className="rounded-2xl border border-white/5 bg-zinc-950 p-6">
-                <p className="text-zinc-500 text-sm mb-2">Categoría</p>
-                <p className="text-lg font-bold">Tecnología</p>
+                <p className="text-zinc-500 text-sm mb-2">
+                  {t("stats.category.label")}
+                </p>
+                <p className="text-lg font-bold">
+                  {t("stats.category.value")}
+                </p>
               </div>
 
               <div className="rounded-2xl border border-white/5 bg-zinc-950 p-6">
-                <p className="text-zinc-500 text-sm mb-2">Sitio Web</p>
+                <p className="text-zinc-500 text-sm mb-2">
+                  {t("stats.website.label")}
+                </p>
                 <a
                   href="https://hobisu.com"
                   target="_blank"
@@ -95,7 +110,7 @@ export default function HobisuSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 bg-white text-black rounded-2xl font-semibold hover:scale-105 transition-transform"
             >
-              Visitar Hobisu
+              {t("cta")}
             </a>
           </div>
         </motion.div>
