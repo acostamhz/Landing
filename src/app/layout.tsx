@@ -2,6 +2,7 @@
 
 import type { Metadata } from "next";
 import StructuredData from "@/components/StructuredData";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -124,7 +125,17 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-black text-white">
+        {/* Datos estructurados para SEO */}
         <StructuredData />
+
+        {/* Google Analytics */}
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics
+            gaId={process.env.NEXT_PUBLIC_GA_ID}
+          />
+        )}
+
+        {/* Contenido de la aplicación */}
         {children}
       </body>
     </html>
